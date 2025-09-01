@@ -7,7 +7,6 @@ def add_item() -> None:
 
 def delete_item() -> None:
     active: bool = True
-    length_of_list: int = len(todo_list)
 
     while (active == True):
         item_to_delete: int = int(input("Please enter the index of the item you would like to delete: "))
@@ -21,8 +20,6 @@ def show_list() -> None:
     print(todo_list)
 
 def main() -> None:
-
-
 
 if __name__ == "__main__":
     main()
