@@ -16,10 +16,28 @@ def delete_item() -> None:
         except IndexError:
             print("Whoops! Couldn't find that item.")
 
-def show_list() -> None:
-    print(todo_list)
-
 def main() -> None:
+    running: bool = True
+
+    while running == True:
+        print("1. Add item to list")
+        print("2. Delete item from list")
+        print("3. Show list")
+        print("4. Exit program")
+
+        action = int(input("Enter the action you would like to perform: "))
+
+        match action:
+            case 1:
+                add_item()
+            case 2:
+                delete_item()
+            case 3:
+                print(todo_list)
+            case 4:
+                running = False
+            case _:
+                print("Whoops! Invalid input.")
 
 if __name__ == "__main__":
     main()
